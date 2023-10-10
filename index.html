@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header"></header>
+      <main class="main">
+        <div class="chat">
+          <div id="modal-1" class="modal">
+            <div class="modal__shell">
+              <div class="modal__window">
+                <div class="modal__set">
+                  <div class="modal__str">Настройки</div>
+                  <button class="modal__btn">+</button>
+                </div>
+                <div class="name">
+                  <div class="name__str">Имя в чате</div>
+                  <form class="chat__form">
+                    <div class="form__shell">
+                      <input
+                        class="form__input"
+                        type="text"
+                        id="task"
+                        name="task"
+                        required
+                      />
+                      <button class="form__btn" type="submit">-></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal-2" class="modal">
+            <div class="modal__shell">
+              <div class="modal__window">
+                <div class="modal__set">
+                  <div class="modal__str">Авторизация</div>
+                  <!-- <button class="modal__btn">+</button> -->
+                </div>
+                <div class="name">
+                  <div class="name__str">Почта:</div>
+                  <form class="chat__form">
+                    <div class="form__shell">
+                      <!-- <input class="form__input" type="text" id="input-email-2"> -->
+                      <input
+                        class="form__input"
+                        id="input-email-2"
+                        type="text"
+                        name="message"
+                        value=""
+                      />
+                      <div class="form__btn-shell">
+                        <button
+                          id="btn-authorization-submit-one"
+                          class="form__btn-authorization"
+                          type="submit"
+                        >
+                          Получить код
+                        </button>
+                        <button
+                          id="btn-authorization-submit-2"
+                          class="form__btn-authorization"
+                          type="click"
+                        >
+                          Ввести код
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal-3" class="modal">
+            <div class="modal__shell">
+              <div class="modal__window">
+                <div class="modal__set">
+                  <div class="modal__str">Подтверждение</div>
+                  <!-- <button class="modal__btn">+</button> -->
+                </div>
+                <div class="name">
+                  <div class="name__str">Ключ</div>
+                  <form class="chat__form">
+                    <div class="form__shell">
+                      <input
+                        class="form__input"
+                        type="text"
+                        id="input-token"
+                        name="task"
+                        required
+                      />
+                      <div class="form__btn-shell">
+                        <button
+                          id="log-in-chat"
+                          class="form__btn-authorization"
+                          type="submit"
+                        >
+                          Войти
+                        </button>
+                        <!-- <button class="form__btn-authorization" type="submit">Ввести код</button> -->
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat__container">
+            <div class="chat__header">
+              <button id="set" class="chat__btn">Настройки</button>
+              <button class="chat__btn">Выйти</button>
+            </div>
+            <div class="chat__body-shell">
+              <template id="message">
+                <div class="chat__message-from-me_unsent">
+                  <span class="message-text">Добрый день!</span>
+                  <div class="time-shell">
+                    <div id="time" class="time">18:45</div>
+                    <img class="sent-img" src="img/unsent.png" alt="" />
+                  </div>
+                </div>
+              </template>
+              <div class="chat__body"></div>
+            </div>
+            <form id="form" class="chat__form">
+              <div class="form__shell-message">
+                <input
+                  placeholder="Сообщение"
+                  id="formInput"
+                  class="form__input-message"
+                  type="text"
+                  id="task"
+                  name="task"
+                  required
+                />
+                <button class="form__btn-message" type="submit">
+                  <img class="form__img-message" src="img/tg.png" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script type="module" src="ts/index.ts"></script>
+  </body>
+</html>
